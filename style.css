@@ -1,75 +1,104 @@
 * {
-    text-align: center;
+    text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    list-style-type: none;
-    padding: 2px;
-    background-color: darkred;
-    color: whitesmoke;
-    background-size: cover;
-    box-sizing: border-box;
+    color: black;
 }
 
 
-/* these are my divs for showing/hiding each different page */
+html {
+    background: url('../quiz-app/Elevate-215.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(0, 104, 0);
+    text-align: center;
+}
 
 .start-page {
-    height: 300px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    text-align: center;
+    margin: 5px;
 }
 
-.start-page > button {
-    width: auto;
-
+.start-page p {
+    text-align: center;
 }
+
+button {
+    border-radius: 20px;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: darkred;
+    color: whitesmoke;
+}
+
 
 .quiz-pages {
-    height: 300px;
     display: none;
-    flex-direction: row;
-    justify-content: center;
-    width: auto;
 }
 
-.quiz-pages form {
-    display: flex;
-    flex-direction: column;
-    width: auto;
+.quiz-pages legend {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+    
 }
 
-.quiz-pages form > fieldset {
+.quiz-pages fieldset {
     display: flex;
     flex-direction: column;
+    border: 0px;
+    padding: 0px;
+
+}
+
+button.submitButton {
+    margin: auto;
 }
 
 .answer-pages {
-    height: 300px;
-    display: none;
     flex-direction: column;
-    justify-content: center;
-    height: 300px;
-}
-
-.answer-pages button {
-    width: auto;
+    align-items: center;
 }
 
 .finish-page {
     display: none;
     flex-direction: column;
-    justify-content: center;
-    height: 300px;
+    align-items: center;
 }
-/*end page divs */
 
 footer > ul {
+    padding: 0px;
     display: flex;
+    list-style-type: none;
     justify-content: space-between;
 }
 
-input[type=radio] {
-    color: red;
+
+footer > ul > li {
+    color: whitesmoke;
+}
+
+footer > ul > li > span{
+    color: whitesmoke;
 }
