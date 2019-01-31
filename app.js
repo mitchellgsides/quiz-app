@@ -52,7 +52,7 @@ function questionScreen (){
         $(feedbackScreen);
         $('.quiz-pages').css('display', 'none');
         $(checkAnswer);
-        if(questionNumber === questionData.length) {
+        if(questionNumber === questionData.length-1) {
         $('#next-question-button').text('Quiz Results')
         }
     })
@@ -67,11 +67,12 @@ function checkAnswer() {
     if(answer === questionData[questionNumber-1].correctAns) {
         $('.incorrect-page').css('display', 'none');
         $('.correct-page').css('display', 'flex');
+        $('.correct-answer-is').text('Correct! The answer is: '+questionData[questionNumber-1].correctAns)
         $(incrementScore);
         console.log(score);
     } else {
         $('.incorrect-page').css('display', 'flex');
-        $('#correct-answer-is').text('The correct answer is: '+ questionData[questionNumber-1].correctAns)
+        $('#correct-answer-is').text('Incorrect. The correct answer is: '+ questionData[questionNumber-1].correctAns);
         $('.correct-page').css('display', 'none');
     }
     $(quizForm)
@@ -85,15 +86,13 @@ function nextQuestion() {
             event.preventDefault();
             $('.answer-pages').css('display', 'none');
             $('.quiz-pages').css('display', 'flex');
-            console.log('nextQuestion clicked')
-            questionNumber++;
-            $('#onQuestion').text(questionNumber)
+            console.log('nextQuestion clicked');
+            incrementQuestion();
         } else {
             event.preventDefault();
             finishScreen();
             $('.finish-page').css('display', 'flex');
         }
-    console.log('this is working')
     $('input[name="answer"').prop('checked', false);
     })
     $(quizForm)

@@ -5,10 +5,11 @@
 }
 
 
-html {
-    background: url('../quiz-app/Elevate-215.jpg');
+body {
+    background: url('../quiz-app/Elevate-reduced.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0px;
 }
 
 
@@ -24,10 +25,11 @@ html {
 
 header {
     text-align: center;
+    font-size: 15px;
 }
 
 h1 {
-    color: rgb(0, 104, 0);
+    color: darkred;
     text-align: center;
 }
 
@@ -35,7 +37,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 5px;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 20px;
+    margin: 7%;
+    padding: 5px;
 }
 
 .start-page p {
@@ -43,7 +48,7 @@ h1 {
 }
 
 button {
-  background-color: rgb(0, 104, 0); /* Green */
+  background-color: darkred; /* Green */
   border: none;
   color: white;
   padding: 5px 5px;
@@ -51,7 +56,9 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 5px
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
 }
 
 button:hover {
@@ -63,10 +70,17 @@ button:hover {
 
 .quiz-pages {
     display: none;
-    margin: auto;
+    margin: 7%;
     width: 80%;
     align-content: space-between;
     justify-content: space-evenly;
+    
+}
+
+.quiz-form {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .quiz-pages legend {
@@ -86,11 +100,23 @@ button:hover {
 
 button.submitButton {
     margin: auto;
+    margin-top: 10px;
+
+}
+
+.next-question {
+    margin: auto; 
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .answer-pages {
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .finish-page {
@@ -104,6 +130,7 @@ button.submitButton {
 }
 
 footer > ul {
+    font-size: 20px;
     padding-left: 8px;
     padding-right: 8px;
     display: flex;
@@ -112,7 +139,10 @@ footer > ul {
 }
 
 footer > ul > li {
+    background-color: rgba(0, 0, 0, .5);
     color: whitesmoke;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 footer > ul > li > span{
