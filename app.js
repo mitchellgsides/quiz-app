@@ -52,7 +52,7 @@ function questionScreen (){
         $(feedbackScreen);
         $('.quiz-pages').css('display', 'none');
         $(checkAnswer);
-        if(questionNumber === questionData.length-1) {
+        if(questionNumber === questionData.length) {
         $('#next-question-button').text('Quiz Results')
         }
     })
