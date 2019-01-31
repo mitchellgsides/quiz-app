@@ -3,14 +3,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     list-style-type: none;
     padding: 2px;
-    background-image: url();
+    background-color: darkred;
+    color: whitesmoke;
     background-size: cover;
     box-sizing: border-box;
 }
 
 
 /* these are my divs for showing/hiding each different page */
-
 
 .start-page {
     height: 300px;
