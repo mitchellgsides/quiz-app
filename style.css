@@ -1,7 +1,7 @@
 * {
     text-align: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
+    color: whitesmoke;
 }
 
 
@@ -12,13 +12,14 @@ html {
 }
 
 
-
 .container {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.23);
+    background-size: cover;
 }
 
 header {
@@ -42,19 +43,30 @@ h1 {
 }
 
 button {
-    border-radius: 20px;
-    background-color: whitesmoke;
-    font-weight: bold;
+  background-color: rgb(0, 104, 0); /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px
 }
 
 button:hover {
     background-color: darkred;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 
 .quiz-pages {
     display: none;
+    margin: auto;
+    width: 80%;
+    align-content: space-between;
+    justify-content: space-evenly;
 }
 
 .quiz-pages legend {
@@ -87,13 +99,17 @@ button.submitButton {
     align-items: center;
 }
 
+#your-score {
+    padding: 10px;
+}
+
 footer > ul {
-    padding: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
     display: flex;
     list-style-type: none;
     justify-content: space-between;
 }
-
 
 footer > ul > li {
     color: whitesmoke;
