@@ -15,7 +15,7 @@ function incrementScore() {
 //increment question
 function incrementQuestion() {
     questionNumber++;
-    $('#onQuestion').text(questionNumber)
+    $('#onQuestion').text(questionNumber);
 }
 
 //start screen
@@ -23,9 +23,9 @@ function startScreen(){
     $('.startButton').on('click', function(e) {
         $('.start-page').css('display', 'none');
         $('.quiz-pages').css('display', 'flex');
-        questionNumber = 1
+        questionNumber = 1;
         $('#onQuestion').text(questionNumber);
-        console.log(questionData[questionNumber-1])
+        console.log(questionData[questionNumber-1]);
     })
     console.log('startScreen ran');
 }
@@ -34,14 +34,14 @@ function startScreen(){
 function quizForm() {
     //replace question, answer choices, and value of each question
     $('#question-text').text(questionData[questionNumber].question);
-    $('#answer-choice-1').text(questionData[questionNumber].answers[0])
-    $('input[id= "Answer1"]').val(questionData[questionNumber].answers[0])
-    $('#answer-choice-2').text(questionData[questionNumber].answers[1])
-    $('input[id= "Answer2"]').val(questionData[questionNumber].answers[1])
-    $('#answer-choice-3').text(questionData[questionNumber].answers[2])
-    $('input[id= "Answer3"]').val(questionData[questionNumber].answers[2])
-    $('#answer-choice-4').text(questionData[questionNumber].answers[3])
-    $('input[id= "Answer4"]').val(questionData[questionNumber].answers[3])
+    $('#answer-choice-1').text(questionData[questionNumber].answers[0]);
+    $('input[id= "Answer1"]').val(questionData[questionNumber].answers[0]).prop('checked', false);
+    $('#answer-choice-2').text(questionData[questionNumber].answers[1]);
+    $('input[id= "Answer2"]').val(questionData[questionNumber].answers[1]).prop('checked', false);
+    $('#answer-choice-3').text(questionData[questionNumber].answers[2]);
+    $('input[id= "Answer3"]').val(questionData[questionNumber].answers[2]).prop('checked', false);
+    $('#answer-choice-4').text(questionData[questionNumber].answers[3]);
+    $('input[id= "Answer4"]').val(questionData[questionNumber].answers[3]).prop('checked', false);
     console.log('quizForm ran')
 } 
 
@@ -56,7 +56,7 @@ function questionScreen (){
         $('#next-question-button').text('Quiz Results')
         }
     })
-    console.log('questionScreen ran')
+    console.log('questionScreen ran');
     console.log('You are on question '+ questionNumber);
 }
 
@@ -75,7 +75,7 @@ function checkAnswer() {
         $('#correct-answer-is').text('Incorrect. The correct answer is: '+ questionData[questionNumber-1].correctAns);
         $('.correct-page').css('display', 'none');
     }
-    $(quizForm)
+    $(quizForm);
 }
 
 
@@ -95,14 +95,14 @@ function nextQuestion() {
         }
     $('input[name="answer"').prop('checked', false);
     })
-    $(quizForm)
+    $(quizForm);
     console.log('You are on question ' + questionNumber);
 }
 
 //display feedback screens
 function feedbackScreen(){
-    $('.answer-pages').css('display', 'flex')
-    console.log('feedbackScreen ran')
+    $('.answer-pages').css('display', 'flex');
+    console.log('feedbackScreen ran');
 }
 
 
